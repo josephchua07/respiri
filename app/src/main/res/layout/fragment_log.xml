@@ -2,16 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="16dp"
     tools:context=".ui.log.LogFragment">
 
     <TextView
         android:id="@+id/log_event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log event"
+        android:text="@string/log_event"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/log_event_sub"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,25 +24,34 @@
         android:id="@+id/log_event_sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Which event do you want to log:"
+        android:layout_marginVertical="16sp"
+        android:text="@string/which_event_do_you_want_to_log"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/wheeze_recording"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/log_event" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/wheeze_recording"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Wheeze recording"
+        android:text="@string/wheeze_recording"
+        app:icon="@drawable/ic_sound_24"
+        app:layout_constraintBottom_toTopOf="@id/medication"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/log_event_sub" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/medication"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Medication"
+        android:text="@string/medication"
+        app:icon="@drawable/ic_medication_24"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/wheeze_recording" />
