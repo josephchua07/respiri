@@ -1,4 +1,4 @@
-package com.chua.respiriapp.ui.home
+package com.chua.respiriapp.ui.today
 
 import androidx.lifecycle.ViewModel
 
