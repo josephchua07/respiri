@@ -1,8 +1,8 @@
-package com.chua.respiriapp.ui.today
+package com.chua.respiriapp.ui.medication
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class TodayViewModel @Inject constructor() : ViewModel()
+class MedicationViewModel @Inject constructor() : ViewModel()
