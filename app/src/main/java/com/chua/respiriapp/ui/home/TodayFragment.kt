@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import com.chua.respiriapp.databinding.FragmentTodayBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TodayFragment : Fragment() {
 
     private var _binding: FragmentTodayBinding? = null
@@ -17,13 +19,13 @@ class TodayFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private val todayViewModel: TodayViewModel by viewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val todayViewModel =
-            ViewModelProvider(this).get(TodayViewModel::class.java)
 
         _binding = FragmentTodayBinding.inflate(inflater, container, false)
         val root: View = binding.root
