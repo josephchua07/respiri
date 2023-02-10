@@ -2,7 +2,7 @@
     <string name="app_name">RespiriApp</string>
     <string name="title_today">Today</string>
     <string name="title_medication">Medication</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_log">Log</string>
     <string name="reliever_fragment">reliever fragment</string>
     <string name="preventer_fragment">preventer fragment</string>
     <string name="other_meds_fragment">other meds fragment</string>

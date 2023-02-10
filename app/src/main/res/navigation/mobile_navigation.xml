@@ -17,9 +17,9 @@
         android:label="@string/title_medication"
         tools:layout="@layout/fragment_medication" />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.chua.respiriapp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+    <dialog
+        android:id="@+id/navigation_log"
+        android:name="com.chua.respiriapp.ui.log.LogFragment"
+        android:label="@string/title_log"
+        tools:layout="@layout/fragment_log" />
 </navigation>
