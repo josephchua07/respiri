@@ -1,12 +1,12 @@
 package com.chua.respiriapp.ui.medication
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.viewpager.widget.ViewPager
+import com.chua.respiriapp.R
 import com.chua.respiriapp.databinding.FragmentMedicationBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,12 +23,28 @@ class MedicationFragment : Fragment() {
     private lateinit var medicationPagerAdapter: MedicationPagerAdapter
     private lateinit var viewPager: ViewPager
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.medication_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.navigation_medication -> {
+                Log.d("medication", "add")
+                true
+            }
+            else -> false
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMedicationBinding.inflate(inflater, container, false)
+        setHasOptionsMenu(true)
         return binding.root
     }
 

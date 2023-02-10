@@ -24,4 +24,5 @@
     <string name="you_have_no_other_meds_saved_at_the_moment">You have no other meds saved at the moment.</string>
     <string name="add_other_meds">Add other meds</string>
     <string name="no_other_meds">No other meds</string>
+    <string name="add">Add</string>
 </resources>
